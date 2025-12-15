@@ -2,7 +2,7 @@
 
 A cinematic, turn-based AI debate platform powered by Google's **Gemini 2.0 Flash**. This application orchestrates a structured debate between two AI agents ("Affirmative" vs "Negative") on any given topic, strictly localized in **Bengali (Bangla)**.
 
-![AI Debater UI](https://github.com/HMZiyad/AI---DUO-debater/assets/placeholder-image.png)
+
 
 ## ✨ Features
 
