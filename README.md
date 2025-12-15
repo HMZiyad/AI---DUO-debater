@@ -1,36 +1,77 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🤖 AI Dual Debater (Bengali Edition)
 
-## Getting Started
+A cinematic, turn-based AI debate platform powered by Google's **Gemini 2.0 Flash**. This application orchestrates a structured debate between two AI agents ("Affirmative" vs "Negative") on any given topic, strictly localized in **Bengali (Bangla)**.
 
-First, run the development server:
+![AI Debater UI](https://github.com/HMZiyad/AI---DUO-debater/assets/placeholder-image.png)
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **🎭 Dual AI Personas**: distinct personalities for Affirmative (Optimistic/Tech) and Negative (Skeptic/Industrial) agents.
+- **🇧🇩 Full Bengali Localization**: All UI elements, inputs, and AI-generated arguments are in Bengali.
+- **🎬 Cinematic UI**:
+  - Animated "Battle" intro screen.
+  - Immersive split-toned background.
+  - Custom generated 3D avatars.
+  - Smooth `framer-motion` animations for chat bubbles and typing indicators.
+- **⚡ Real-time Streaming**: Chat-style interface with "typing" effects.
+- **🧠 Advanced Logic**: 10-step structured debate format (Thesis -> Rebuttals -> Closing).
+- **🛡️ Robust Error Handling**: Manual retry mechanism for network/API interruptions.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🛠️ Tech Stack
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+- **Framework**: [Next.js 16](https://nextjs.org/) (App Router)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: [Framer Motion](https://www.framer.com/motion/)
+- **AI Model**: [Google Gemini 1.5 Flash](https://ai.google.dev/) (via `@google/generative-ai`)
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Node.js 18+ installed.
+- A Google Gemini API Key (Get one [here](https://aistudio.google.com/app/apikey)).
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Installation
 
-## Deploy on Vercel
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/HMZiyad/AI---DUO-debater.git
+   cd AI---DUO-debater
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+2. **Install dependencies**:
+   ```bash
+   npm install
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+3. **Configure Environment**:
+   Create a `.env.local` file in the root directory and add your API key:
+   ```env
+   GEMINI_API_KEY=your_actual_api_key_here
+   ```
+
+4. **Run the Development Server**:
+   ```bash
+   npm run dev
+   ```
+
+5. **Open various Usage**:
+   Navigate to [http://localhost:3000](http://localhost:3000) in your browser.
+
+## 🎨 Customization
+
+### Modifying the Debate Logic
+The debate structure is defined in `app/api/debate/route.ts` inside the `TURN_MAP` object. You can adjust the instructions there to change the debate format or style.
+
+### Changing Puppeteers/Avatars
+Replace the images in `public/avatars/` to change the agent personas:
+- `affirmative.png`: Avatar for Agent 1 (Left/Blue)
+- `negative.png`: Avatar for Agent 2 (Right/Red)
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📄 License
+
+This project is open-source and available under the [MIT License](LICENSE).
